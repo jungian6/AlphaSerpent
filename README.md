@@ -8,7 +8,7 @@ This project implements:
 - A Snake game environment with Pygame
 - A Deep Q-Network (DQN) agent that learns to play Snake
 - Training pipeline for the agent
-- Visualization for the training progress
+- Visualisation for the training progress
 - The ability to watch the trained AI play
 
 ## Project Structure
@@ -48,16 +48,6 @@ from game import SnakeGame
 game = SnakeGame()
 game.play_human()
 ```
-
-## Learning Process
-
-The DQN agent learns by:
-1. Exploring the environment with an epsilon-greedy strategy
-2. Storing experiences in a replay memory
-3. Periodically sampling and learning from past experiences
-4. Gradually reducing exploration in favor of exploitation
-
-Training progress is visualized with matplotlib, showing score improvements, exploration rate decay, and loss reduction over time.
 
 ---
 
