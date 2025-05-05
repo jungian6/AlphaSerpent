@@ -1,7 +1,6 @@
 # AlphaSerpent
 
-AlphaSerpent is a Deep Q-Learning implementation of an AI that learns to play the classic Snake game. This project is based on a reinforcement learning course and demonstrates the application of deep learning to game playing.
-
+AlphaSerpent is a Deep Q-Learning implementation of an AI that learns to play the classic Snake game.
 ## Project Overview
 
 This project implements:
