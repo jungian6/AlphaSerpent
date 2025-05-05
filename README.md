@@ -2,63 +2,42 @@
 
 AlphaSerpent is a Deep Q-Learning implementation of an AI that learns to play the classic Snake game. This project is based on a reinforcement learning tutorial and demonstrates the application of deep learning to game playing.
 
-## Project Overview
+## What it does
 
-This project implements:
-- A Snake game environment with Pygame
-- A Deep Q-Network (DQN) agent that learns to play Snake
-- Training pipeline for the agent
-- Visualization for the training progress
-- The ability to watch the trained AI play
+- Snake game built with Pygame
+- AI that learns to play using deep Q-learning
+- Training visualisations to track progress
 
-## Project Structure
+## Files
 
-- `game.py`: Snake game implementation with both visual and agent interfaces
-- `agent.py`: DQN agent implementation using TensorFlow/Keras
-- `train.py`: Training script for the AI
-- `play_ai.py`: Script to watch the trained AI play the game
-- `models/`: Directory to store trained model weights
+- `game.py` - Snake game implementation
+- `agent.py` - DQN agent using TensorFlow
+- `train.py` - Trains the AI
+- `play_ai.py` - Watch the AI play
 
-## How to Run
+## Quick Start
 
-### Setup
 ```bash
-# Create and activate a virtual environment (recommended)
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+# Install requirements
+pip install -r requirements.txt
 
-# Install dependencies
-pip install tensorflow numpy matplotlib pygame
-```
-
-### Training the AI
-```bash
+# Train the AI 
 python train.py
+
+# Watch it play
+python play_ai.py
 ```
 
-### Watching the AI Play
-```bash
-python play_ai.py --model models/alphaserpent_final.h5 --delay 0.1
-```
-
-### Playing the Game Yourself
-The game environment also supports human play:
+You can also play yourself:
 ```python
 from game import SnakeGame
 game = SnakeGame()
 game.play_human()
 ```
 
-## Learning Process
+## Google Colab Version
 
-The DQN agent learns by:
-1. Exploring the environment with an epsilon-greedy strategy
-2. Storing experiences in a replay memory
-3. Periodically sampling and learning from past experiences
-4. Gradually reducing exploration in favor of exploitation
+If you don't want to melt your own GPU, use Google's TPUs instead:
+[Run on Google Colab](https://colab.research.google.com/drive/1ALm56h9ngUZCf4Q78PnE___TpokcuIlR?usp=sharing)
 
-Training progress is visualized with matplotlib, showing score improvements, exploration rate decay, and loss reduction over time.
-
----
-
-*Note: This project is based on a reinforcement learning tutorial and serves as a demonstration of applying deep Q-learning to game playing.* 
+This was a fun project to learn about reinforcement learning. The AI starts out terrible but gets pretty good after training!
